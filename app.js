@@ -1,5 +1,10 @@
-const element = document.getElementById("button");
-/*element.addEventListener("click", phpFetch);
+const element = document.getElementById("button").addEventListener("click", 
+fetch('superheroes.php')
+.then(response=> response.txt())
+.then(textString => {
+    console.log(textString);
+}));
+/*const element = document.getElementById("button").addEventListener("click", phpFetch);
 
 async function phpFetch (file){
     try{
@@ -14,9 +19,3 @@ async function phpFetch (file){
     }
 }
 phpFetch("superheroes.php");*/
-element.addEventListener("click", 
-fetch('superheroes.php')
-.then(response=> response.txt())
-.then(textString => {
-    console.log(textString);
-}));
